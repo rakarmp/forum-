@@ -38,6 +38,14 @@ class UsersTableSeeder extends Seeder
             'type'      => User::DEFAULT,
         ]);
 
+        User::factory()->create([
+            'name'      => 'Raka Rmp',
+            'username'  => 'rakarmp',
+            'email'     => 'rakarmp@gmail.com',
+            'password'  => bcrypt('password'),
+            'type'      => User::DEFAULT,
+        ]);
+
         User::factory()->count(10)->create();
     }
 }
