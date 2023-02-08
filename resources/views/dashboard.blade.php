@@ -8,7 +8,11 @@
     <div class="py-12">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                <b><i>Welcome To Comunity</i></b> <br /><br />
+                <b><i>Welcome, {{ Auth::user()->name }}!</i></b> <br />
+
+                <b>Kami senang Anda ada di sini dan siap bergabung dalam percakapan. <br />Bagikan pemikiran Anda, ajukan pertanyaan, dan terhubung dengan anggota lain</b>
+                <br /><br />
+
                 <ol>
                     <li>1. Fokus pada topik pemrograman dan teknologi.</li>
                     <li>2. Hindari menanyakan pertanyaan yang sudah dibahas sebelumnya.</li>
