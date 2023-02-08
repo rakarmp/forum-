@@ -14,32 +14,30 @@
                     <tr>
                         <x-table.head>Name</x-table.head>
                         <x-table.head>Bio</x-table.head>
-                        <x-table.head>Birthday</x-table.head>
                         <x-table.head class="text-center">Role</x-table.head>
                         <x-table.head class="text-center">Joined Date</x-table.head>
                     </tr>
                 </thead>
 
                 <tbody class="divide-y divide-gray-200 divide-solid">
+                    @foreach ($users as $user)
                     <tr>
                         <x-table.data>
-                            <div>John Doe</div>
+                            <div>{{ $user->name }}</div>
                         </x-table.data>
                         <x-table.data>
-                            <div>Some description of bio....</div>
-                        </x-table.data>
-                        <x-table.data>
-                            <div>date</div>
+                            <div>{{ $user->bio }}</div>
                         </x-table.data>
                         <x-table.data>
                             <div class="px-2 py-1 text-center text-gray-700 bg-green-200 rounded">
-                                Moderator
+                                {{ $user->type == 1 ? 'Default' : ($user->type == 2 ? 'Moderator' : ($user->type == 3 ? 'Admin' : '')) }}
                             </div>
                         </x-table.data>
                         <x-table.data>
-                            <div class="text-center">2005-14-06</div>
+                            <div class="text-center">{{ $user->email_verified_at }}</div>
                         </x-table.data>
                     </tr>
+                    @endforeach
                 </tbody>
 
             </table>

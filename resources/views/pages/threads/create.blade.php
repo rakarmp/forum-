@@ -1,3 +1,16 @@
+<style>
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        resize: none;
+        font-size: 16px;
+    }
+
+</style>
+
 <x-guest-layout>
     <main class="grid grid-cols-4 gap-8 mt-8 wrapper">
 
@@ -46,10 +59,19 @@
 
                                 {{-- Body --}}
                                 <div>
-                                    {{-- <x-form.label for="body" value="{{ __('Description') }}" />
-                                    <x-trix name="body" styling="shadow-inner bg-gray-100 h-56" /> --}}
-                                    <textarea name="body" id="" cols="30" rows="10"></textarea>
+                                    <x-form.label for="body" value="{{ __('Description') }}" />
+                                    {{-- <x-trix name="body" styling="shadow-inner bg-gray-100 h-56" /> --}}
+                                    {{-- <textarea name="body" rows="10"></textarea> --}}
+                                    <textarea class="ckeditor form-control" name="body"></textarea>
                                     <x-form.error for="body" />
+
+                                    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $('.ckeditor').ckeditor();
+                                        });
+
+                                    </script>
                                 </div>
 
                                 {{-- Button --}}

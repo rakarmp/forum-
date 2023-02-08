@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Middleware\IsAdmin;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -10,7 +11,9 @@ class PageController extends Controller
 
     public function users()
     {
-        return view('admin.users.index');
+        return view('admin.users.index', [
+            'users' => User::all(),
+        ]);
     }
 
     public function categoriesIndex()

@@ -36,7 +36,7 @@
         </tbody>
     </table>
     @else
-    You have no unread Notifications
+    <b><i>You Not Have Any Notifications</i></b>
     @endif
 
 </div>

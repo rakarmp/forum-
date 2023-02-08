@@ -50,11 +50,25 @@
 
                                 {{-- Body --}}
                                 <div>
-                                    <x-form.label for="body" value="{{ __('Description') }}" />
+                                    {{-- <x-form.label for="body" value="{{ __('Description') }}" />
                                     <x-trix name="body" styling="shadow-inner bg-gray-100 h-56">
                                         {{ $thread->body() }}
                                     </x-trix>
+                                    <x-form.error for="body" /> --}}
+
+                                    <x-form.label for="body" value="{{ __('Description') }}" />
+                                    {{-- <x-trix name="body" styling="shadow-inner bg-gray-100 h-56" /> --}}
+                                    {{-- <textarea name="body" rows="10"></textarea> --}}
+                                    <textarea class="ckeditor form-control" name="body">{{ $thread->body() }}</textarea>
                                     <x-form.error for="body" />
+
+                                    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $('.ckeditor').ckeditor();
+                                        });
+
+                                    </script>
                                 </div>
 
                                 {{-- Button --}}
