@@ -21,7 +21,7 @@
 
                     <div class="relative col-span-6 space-y-4">
                         <p>
-                            {{ $replyOrigBody }}
+                            {!! $replyOrigBody !!}
                         </p>
 
                         <div class="absolute flex justify-between w-full bottom-1">
