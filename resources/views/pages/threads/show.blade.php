@@ -67,7 +67,7 @@
                 </div>
             </article>
 
-            {{-- Replies --}}
+            {{-- Replies/Komentar --}}
             <div class="mt-6 space-y-5">
                 <h2 class="mb-0 text-sm font-bold uppercase">Replies</h2>
                 <hr>
@@ -81,8 +81,19 @@
                 <h2 class="text-gray-500">Post a reply</h2>
                 <x-form action="{{ route('replies.store') }}">
                     <div>
-                        <input type="text" name="body" class="w-full bg-gray-200 border-none shadow-inner focus:ring-blue-400" />
+                        {{-- <input type="text" name="body" class="w-full bg-gray-200 border-none shadow-inner focus:ring-blue-400" />
+                        <x-form.error for="body" /> --}}
+
+                        <textarea class="ckeditor form-control" name="body"></textarea>
                         <x-form.error for="body" />
+
+                        <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('.ckeditor').ckeditor();
+                            });
+
+                        </script>
 
                         <input type="hidden" name="replyable_id" value="{{ $thread->id() }}">
                         <x-form.error for="replyable_id" />
@@ -101,7 +112,8 @@
             </div>
             @else
             <div class="flex justify-between p-4 text-gray-700 bg-blue-200 rounded">
-                <h2>Please login to leave a comment</h2>
+                <h2>
+                    Silahkan login untuk meninggalkan komentar</h2>
                 <a href="{{ route('login') }}">Login</a>
             </div>
             @endauth
