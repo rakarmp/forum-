@@ -1,12 +1,14 @@
-require('./bootstrap');
+require("./bootstrap");
 
-import Alpine from 'alpinejs'
+import Alpine from "alpinejs";
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 
-Alpine.start()
+Alpine.start();
 
-import Choices from 'choices.js';
+import Choices from "choices.js";
+
+window.choices(document.getElementById("tags"));
 
 // Create multiselect element
 window.choices = (element) => {
@@ -14,4 +16,4 @@ window.choices = (element) => {
         maxItemCount: 3,
         removeItemButton: true,
     });
-}
+};
