@@ -5232,6 +5232,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
+window.choices(document.getElementById("tags"));
 
 // Create multiselect element
 window.choices = function (element) {
