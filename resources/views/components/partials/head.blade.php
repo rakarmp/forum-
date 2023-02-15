@@ -25,12 +25,12 @@
 {{-- Livewire --}}
 <livewire:styles />
 
-<!-- Include base CSS (optional) -->
+{{-- <!-- Include base CSS (optional) -->
 <link rel="stylesheet" href="public/assets/styles/base.min.css" />
 <!-- Include Choices CSS -->
 <link rel="stylesheet" href="public/assets/styles/choices.min.css" />
 <!-- Include Choices JavaScript -->
-<script src="/public/assets/scripts/choices.min.js"></script>
+<script src="/public/assets/scripts/choices.min.js"></script> --}}
 
 {{-- Blade UI Kit --}}
 @bukStyles(true)
