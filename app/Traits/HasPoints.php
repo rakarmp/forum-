@@ -34,23 +34,23 @@ trait HasPoints
         $currentPoints = $this->currentPoints();
 
         if ($currentPoints <= 100) {
-            return 'Recruit';
+            return '✨ Recruit';
         }
 
         if ($currentPoints <= 500) {
-            return 'Corporal';
+            return '🔥 Corporal';
         }
 
         if ($currentPoints <= 1000) {
-            return 'Sergeant';
+            return '🥉 Sergeant';
         }
 
         if ($currentPoints <= 4000) {
-            return 'First Sergeant';
+            return '🥈 First Sergeant';
         }
 
         if ($currentPoints <= 10000) {
-            return 'Master Sergeant';
+            return '🥇🌠 Master Sergeant';
         }
     }
 }
