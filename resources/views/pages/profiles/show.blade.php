@@ -10,7 +10,7 @@
 
             <div>
                 <h2 class="font-semibold">
-                    {{ $user->rank() }}
+                    Rank :{{ $user->rank() }}
                 </h2>
             </div>
 
