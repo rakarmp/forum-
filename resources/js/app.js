@@ -12,6 +12,10 @@ import Choices from "choices.js";
 
 // buat multiselect element menggunakan choices.js
 
+window.onload = function () {
+    Choices(document.getElementById("tags"));
+};
+
 window.choices = (element) => {
     return new Choices(element, {
         maxItemCount: 3,
