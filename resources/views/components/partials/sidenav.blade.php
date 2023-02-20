@@ -46,10 +46,10 @@
             <li>
                 <a href="#" class="flex items-center justify-between">
                     Category One
-                    <span class="px-2 text-white bg-green-300 rounded"></span>
+                    <span class="px-2 text-white bg-green-300 rounded">14</span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="#" class="flex items-center justify-between">
                     Category Two
                     <span class="px-2 text-white bg-green-300 rounded">45</span>
@@ -72,7 +72,7 @@
                     Category Five
                     <span class="px-2 text-white bg-green-300 rounded">45</span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 
