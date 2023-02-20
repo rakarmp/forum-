@@ -46,7 +46,7 @@
             <li>
                 <a href="#" class="flex items-center justify-between">
                     Category One
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
+                    <span class="px-2 text-white bg-green-300 rounded"></span>
                 </a>
             </li>
             <li>
