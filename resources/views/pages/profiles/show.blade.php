@@ -10,7 +10,10 @@
 
             <div>
                 <h2 class="font-semibold">
-                    Rank :{{ $user->rank() }}
+                    {{ $user->rank() }}
+                </h2>
+                <h2 class="font-semibold text-sm ml-8">
+                    {{ $user->currentPoints() }}
                 </h2>
             </div>
 
