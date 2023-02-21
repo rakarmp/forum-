@@ -33,4 +33,9 @@ class Category extends Model
     {
         return $this->slug;
     }
+
+    public function threadCount(): int
+    {
+        return $this->threads()->count();
+    }
 }
