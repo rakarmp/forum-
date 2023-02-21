@@ -43,36 +43,14 @@
         </div>
 
         <ul class="space-y-4">
+            @foreach (\App\Models\Category::all() as $category)
             <li>
                 <a href="#" class="flex items-center justify-between">
-                    Category One
-                    <span class="px-2 text-white bg-green-300 rounded">14</span>
+                    {{ $category->name() }}
+                    <span class="px-2 text-white bg-green-300 rounded">{{ $category->threadCount() }}</span>
                 </a>
             </li>
-            {{-- <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Two
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Three
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Four
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="flex items-center justify-between">
-                    Category Five
-                    <span class="px-2 text-white bg-green-300 rounded">45</span>
-                </a>
-            </li> --}}
+            @endforeach
         </ul>
     </div>
 
