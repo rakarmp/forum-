@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Pages;
 
 use App\Models\Tag;
 use App\Models\Thread;
-use App\Models\Category;
 use App\Http\Controllers\Controller;
 
 class TagController extends Controller
