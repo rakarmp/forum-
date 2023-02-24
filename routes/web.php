@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Pages\TagController;
@@ -42,6 +43,10 @@ Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
 
     Route::group(['as' => 'tags.'], function () {
         Route::get('/{tag:slug}', [TagController::class, 'index'])->name('index');
+    });
+
+    Route::group(['as' => 'category.'], function () {
+        Route::get('/{category:slug}', [CategoryController::class, 'index'])->name('index');
     });
 });
 
