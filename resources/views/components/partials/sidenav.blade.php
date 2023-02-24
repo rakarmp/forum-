@@ -45,7 +45,7 @@
         <ul class="space-y-4">
             @foreach (\App\Models\Category::all() as $category)
             <li>
-                <a href="#" class="flex items-center justify-between">
+                <a href="{{ route('threads.category.index', $category->slug()) }}" class="flex items-center justify-between">
                     {{ $category->name() }}
                     <span class="px-2 text-white bg-green-300 rounded">{{ $category->threadCount() }}</span>
                 </a>
