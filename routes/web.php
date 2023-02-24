@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Pages\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Pages\TagController;
@@ -25,7 +25,7 @@ use App\Http\Controllers\Dashboard\NotificationController;
 require 'admin.php';
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
+Route::get('/category/{category}', [CategoryController::class, 'index'])->name('pages.category.index');
 Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
     /* Name: Threads
      * Url: /threads/*
@@ -43,10 +43,6 @@ Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
 
     Route::group(['as' => 'tags.'], function () {
         Route::get('/{tag:slug}', [TagController::class, 'index'])->name('index');
-    });
-
-    Route::group(['as' => 'category.'], function () {
-        Route::get('/{category:slug}', [CategoryController::class, 'index'])->name('index');
     });
 });
 
