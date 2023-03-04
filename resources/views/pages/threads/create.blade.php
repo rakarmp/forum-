@@ -61,8 +61,6 @@
                                 {{-- Body --}}
                                 <div>
                                     <x-form.label for="body" value="{{ __('Description') }}" />
-                                    {{-- <x-trix name="body" styling="shadow-inner bg-gray-100 h-56" /> --}}
-                                    {{-- <textarea name="body" rows="10"></textarea> --}}
                                     <textarea class="ckeditor form-control" name="body"></textarea>
                                     <x-form.error for="body" />
 
