@@ -25,7 +25,6 @@ use App\Http\Controllers\Dashboard\NotificationController;
 require 'admin.php';
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/category/{category}', [CategoryController::class, 'index'])->name('pages.category.index');
 Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
     /* Name: Threads
      * Url: /threads/*
