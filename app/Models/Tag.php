@@ -38,4 +38,9 @@ class Tag extends Model
     {
         return $this->morphedByMany(Thread::class, 'taggable');
     }
+    
+    public function threadCount(): int
+    {
+        return $this->threads()->count();
+    }
 }
