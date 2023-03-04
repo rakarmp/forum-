@@ -113,7 +113,7 @@
             @else
             <div class="flex justify-between p-4 text-gray-700 bg-blue-200 rounded">
                 <h2>
-                    Silahkan login untuk meninggalkan komentar</h2>
+                    Please Login Before Reply In Thread</h2>
                 <a href="{{ route('login') }}">Login</a>
             </div>
             @endauth
