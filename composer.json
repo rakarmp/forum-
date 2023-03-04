@@ -10,6 +10,7 @@
         "blade-ui-kit/blade-icons": "^1.0",
         "blade-ui-kit/blade-ui-kit": "^0.2.0",
         "blade-ui-kit/blade-zondicons": "^1.1",
+        "codeat3/blade-google-material-design-icons": "^1.17",  
         "cyrildewit/eloquent-viewable": "^6.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
