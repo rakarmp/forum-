@@ -36,25 +36,26 @@
         @endauth
     </div>
 
-    {{-- Categories --}}
-    <div class="p-4 space-y-4 bg-white shadow ">
-        <div class="pb-4 mb-4 border-b border-gray-200">
-            <h2 class="font-bold uppercase">Categories</h2>
-        </div>
-
-        <ul class="space-y-4">
-            @foreach (\App\Models\Category::all() as $category)
-            <li>
-                <a href="{{ route('threads.category.index', $category->slug()) }}" class="flex items-center justify-between">
-                    {{ $category->name() }}
-                    <span class="px-2 text-white bg-green-300 rounded">{{ $category->threadCount() }}</span>
+    <div class="p-4 space-y-4 bg-white shadow">
+        <ul class="space-y-4 text-gray-500">
+        <li>
+            <a href='{{ route('threads.index') }}' class="flex items-center justify-between font-bold">
+                All Thread
+                <span class="px-2 text-white bg-green-300 rounded">{{ \App\Models\Thread::count() }}</span>
+            </a>
+        </li>
+            @foreach (\App\Models\Tag::all() as $tags)
+                <li>
+                <a href="{{ route('threads.tags.index', $tags->slug()) }}" class="flex items-center justify-between">
+                    {{ $tags->name() }}
+                    <span class="px-2 text-white bg-green-300 rounded">{{ $tags->threadCount() }}</span>
                 </a>
             </li>
             @endforeach
         </ul>
     </div>
 
-    <div class="p-4 space-y-4 bg-white shadow">
+    {{-- <div class="p-4 space-y-4 bg-white shadow">
         <ul class="space-y-4 text-gray-500">
             <li>
                 <a href="#" class="flex items-center space-x-2">
@@ -75,7 +76,20 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> --}}
+
+        {{-- <div class="p-4 space-y-4 bg-white shadow ">
+        <ul class="space-y-4">
+            @foreach (\App\Models\Category::all() as $category)
+            <li>
+                <a class="flex items-center justify-between" readonly>
+                    {{ $category->name() }}
+                    <span class="px-2 text-white bg-green-300 rounded">{{ $category->threadCount() }}</span>
+                </a>
+            </li>
+            @endforeach
+        </ul>
+    </div> --}}
 
 
 </aside>
