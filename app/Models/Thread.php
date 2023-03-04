@@ -94,18 +94,4 @@ class Thread extends Model implements ReplyAble, SubscriptionAble, Viewable
             $query->where('tags.slug', $tag);
         });
     }
-
-    // public function scopeForCategory(Builder $query, string $category): Builder
-    // {
-    //     return $query->whereHas('categoriesRelation', function ($query) use ($category) {
-    //         $query->where('category.slug', $category);
-    //     });
-    // }
-
-    public function scopeForCategory($query, $categorySlug)
-    {
-        return $query->whereHas('category', function ($query) use ($categorySlug) {
-            $query->where('slug', $categorySlug);
-        });
-    }
 }
