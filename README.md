@@ -56,3 +56,6 @@ Proyek ini dibangun menggunakan teknologi web Laravel PHP Framework dan MySQL se
 -   Node-notifier: Library untuk memberikan notifikasi pada aplikasi desktop dari Node.js.
 
 Semua teknologi, plugin, dan library yang digunakan telah dipilih untuk membantu mengembangkan proyek dengan lebih cepat, lebih aman, dan lebih mudah. Dengan menggunakan teknologi-teknologi ini, proyek "Forum Obrolan Programming" menjadi lebih profesional dan siap digunakan oleh pengguna.
+
+## Atention 
+- Project End Progress.
